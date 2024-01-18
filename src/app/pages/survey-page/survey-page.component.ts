@@ -8,6 +8,8 @@ import { SurveyQuestionComponent } from '../survey-question/survey-question.comp
 })
 export class SurveyPageComponent implements OnInit {
   nextQue: any;
+  selectedRating = 5;
+  ratings = Array.from({ length: 11 }, (_, index) => index + 1);
   ngOnInit() {
     console.log();
 
@@ -70,6 +72,9 @@ export class SurveyPageComponent implements OnInit {
     if(this.currentQuestionIndex == 11){
       
     }
+    if(this.currentQuestionIndex == 12){
+
+    }
     // Check if answers are provided for both questions
     if (
       this.answers[this.currentQuestionIndex]?.answer1 !== undefined &&
@@ -78,8 +83,8 @@ export class SurveyPageComponent implements OnInit {
       // Save the answers to the questionAnswers array
       this.questionAnswers.push({
         questionId: this.currentQuestion.id,
-        answer1: this.answers[this.currentQuestionIndex].answer1,
-        answer2: this.answers[this.currentQuestionIndex].answer2
+        responce_one_id: this.answers[this.currentQuestionIndex].answer1,
+        responce_two_id: this.answers[this.currentQuestionIndex].answer2
       });
 
       // Increment the current question index
@@ -94,6 +99,10 @@ export class SurveyPageComponent implements OnInit {
 
     } else {
     }
+  }
+
+  setRating(value: number): void {
+    this.selectedRating = value;
   }
 
 }

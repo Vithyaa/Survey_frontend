@@ -10,6 +10,7 @@ import { ThankPageComponent } from './pages/thank-page/thank-page.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SurveyQuestionComponent } from './pages/survey-question/survey-question.component';
+import { RatingComponent } from './pages/rating/rating.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { SurveyQuestionComponent } from './pages/survey-question/survey-question
     LoginPageComponent,
     SurveyPageComponent,
     ThankPageComponent,
-    SurveyQuestionComponent
+    SurveyQuestionComponent,
+    RatingComponent
   ],
   imports: [
     BrowserModule,

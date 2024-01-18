@@ -14,7 +14,13 @@
                 </div>
             </div>
             <div class="row" *ngIf="currentQuestionIndex == 11">
-                
+                <h1>Survey Page</h1>
+      <div>
+        <span *ngFor="let value of ratings" (click)="setRating(value)" [class.selected]="value <= selectedRating">
+          {{ value }}
+        </span>
+      </div>
+      <p>Selected Rating: {{ selectedRating }}</p>
             </div>
             <div class="text-center mt-4">
                 <button class="btn btn-primary" (click)="onNextClick()">Next</button>
