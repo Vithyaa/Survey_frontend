@@ -1,3 +1,4 @@
+<!-- survey-question.component.html -->
 <div class="card mb-4">
     <div class="card-body">
       <h5 class="card-title">{{ question.title }}</h5>
@@ -9,6 +10,7 @@
           [name]="'question' + question.id"
           [value]="option.id"
           (change)="onOptionChange(option.id)"
+          [checked]="value"
         />
         <label class="form-check-label" [for]="'option' + i">{{ option.name }}</label>
       </div>
