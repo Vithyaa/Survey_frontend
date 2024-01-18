@@ -5,7 +5,7 @@ import { Injectable } from "@angular/core";
 export class AppConstants {
 
 
-    questions: any = [
+    japQuestions: any = [
         { id: 1, topic: "受容性", question: "私はコントロールできない要因を見分ける能力と、理知的に制限の理由を突き止める能力を区別し、「真の受容性」とは感情的な反応ではなく、認知的な理解力によるものだとわかっている。" },
         { id: 2, topic: "向上心", question: "私は、成長のための挑戦を受け入れる意欲、失敗を恐れる気持ちをコントロールする能力、そしてセルフケアへの一貫した取り組みを綿密に評価し、「真の向上心」とは、願望とウェルビーイングのバランスをとりながら、自信と精神的回復力(メンタル・レジリエンス)を高めるものだと理解している。" },
         { id: 3, topic: "自律性", question: "私は自分の考えや 決断を下し、それに基づいて行動する主体性と権限を持っており、個人的な状況、外部からのプレッシャー、社会的な期待に惑わされることなく行動します。" },
@@ -19,5 +19,21 @@ export class AppConstants {
         { id: 11, topic: "責任感", question: "私は、コントロール不可能な状況に対する自分の反応や 、起業家としての最大限の可能性を活用する義務を自らに課し、「真の責任感」とは、説明責任と自分の最善の目的（パーパス）を成し遂げようとする意欲の両方に根ざしていることを理解しています。" },
         { id: 12, topic: "マインドセット・ランキング", question: "以下の11項目のマインドセット要素を、ご自身の起業家精神の向上の観点からランク付けしてください（1が最も価値が高く、11が最も価値が低いとします）。" }
     ];
+
+    engQuestion: any = [
+        { id: 1, topic: "Acceptance", question: "" },
+        { id: 2, topic: "Ambition", question: "" },
+        { id: 3, topic: "Autonomy", question: "" },
+        { id: 4, topic: "Awareness", question: "" },
+        { id: 5, topic: "Discernment", question: "" },
+        { id: 6, topic: "Intention", question: "" },
+        { id: 7, topic: "Passion", question: "" },
+        { id: 8, topic: "Purpose", question: "" },
+        { id: 9, topic: "Refinement", question: "" },
+        { id: 10, topic: "Resilience", question: "" },
+        { id: 11, topic: "Responsibility", question: "" },
+        { id: 12, topic: "Mindset Ranking", question: "“In your opinion, please rank the following 11 mindset disciplines (with 1 being the most valuable and 11 being the least valuable) for your own entrepreneurial journey.”" }
+      ];  
+
 
 }
