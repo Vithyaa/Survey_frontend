@@ -1,1 +1,75 @@
-<p>login-page works!</p>
+<!-- login-page.component.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Page Title</title>
+    <!-- Add Bootstrap CSS link -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <style>
+        body {
+            background-image: url('https://th.bing.com/th?id=OIP.I393BTGtMl_iPld6IvId5QHaEu&w=312&h=199&c=8&rs=1&qlt=90&o=6&dpr=1.7&pid=3.1&rm=2');
+            background-size: cover;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            background-position: center;
+            justify-content: center;
+        }
+    </style>
+
+    <div class="container mt-5">
+        <div class="card border border-4 bg-transparent text-white mx-auto" style="max-width: 400px;">
+            <div class="card-body border border-white border-4 rounded">
+                <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+                    <h5 class="text-center">Check the corresponding answers and fill the empty fields</h5><br>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control bg-transparent text-white border-white" id="name"
+                            formControlName="name">
+                        <div *ngIf="myForm.get('name')?.invalid && myForm.get('name')?.touched" class="text-danger">
+                            Name is required.
+                        </div>
+                    </div><br>
+                    <div class="form-group">
+                        <label for="age">Age</label>
+                        <input type="number" class="form-control bg-transparent text-white border-white" id="age"
+                            formControlName="age">
+                        <div *ngIf="myForm.get('age')?.invalid && myForm.get('age')?.touched" class="text-danger">
+                            Age is required.
+                        </div>
+                    </div><br>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control bg-transparent text-white border-white" id="email"
+                            formControlName="email">
+                        <div *ngIf="myForm.get('email')?.invalid && myForm.get('email')?.touched" class="text-danger">
+                            <div *ngIf="myForm.get('email')?.hasError('required')">Email is required.</div>
+                            <div
+                                *ngIf="myForm.get('email')?.hasError('email') && !myForm.get('email')?.hasError('required')">
+                                Please enter a valid email address.</div>
+                        </div>
+                    </div><br>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary" [disabled]="myForm.invalid"
+                            routerLink="/survey">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

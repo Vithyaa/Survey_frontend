@@ -1,1 +1,62 @@
-<p>welcome-page works!</p>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Angular Bootstrap App</title>
+    <!-- Add Bootstrap CSS link here -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+Wyq6D99tlHTzp5i9SGK3SzzVo5T4Cc7EFA" crossorigin="anonymous">
+
+    <style>
+        body {
+            background-image: url('https://th.bing.com/th?id=OIP.I393BTGtMl_iPld6IvId5QHaEu&w=312&h=199&c=8&rs=1&qlt=90&o=6&dpr=1.7&pid=3.1&rm=2');
+            /* Add the path to your background image */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card {
+            background-color: rgba(255, 255, 255, 0.8);
+            /* Set the background color for the card */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container mt-5 px-5">
+        <div class="d-flex justify-content-center">
+            <div class="form-group py-5">
+                <label for="exampleFormControlSelect1"></label>
+                <select class="form-control border border-dark" id="exampleFormControlSelect1" required
+                    [(ngModel)]="selectedLanguage">
+                    <option [value]="null" disabled selected>Select language</option>
+                    <option value="English">English</option>
+                    <option value="Japanese">Japanese</option>
+                </select>
+            </div>
+        </div>
+        <div class="card bg-transparent text-white mx-auto" style="max-width: 900px; max-height: 300px;">
+            <div class="card-body border border-white border-4 rounded">
+                <h1 class="text-center">Entrepreneurial Self Discovery</h1><br>
+
+
+                <br>
+                <div class="text-center d-flex justify-content-end">
+                    <button type="button" class="btn btn-primary" routerLink="/login" [disabled]="!selectedLanguage"
+                        (click)="onSubmit()">Go</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
