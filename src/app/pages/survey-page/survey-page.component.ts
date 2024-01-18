@@ -1,5 +1,7 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { SurveyQuestionComponent } from '../survey-question/survey-question.component';
+import { AppServiceService } from 'src/app/app.service.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-survey-page',
@@ -47,7 +49,9 @@ export class SurveyPageComponent implements OnInit {
   questionAnswers: any[] = [];
 
   constructor(
-    private cdref: ChangeDetectorRef
+    private cdref: ChangeDetectorRef,
+    private service: AppServiceService,
+    private route: Router,
   ){
 
   }
@@ -70,10 +74,13 @@ export class SurveyPageComponent implements OnInit {
 
   onNextClick(): void {
     if(this.currentQuestionIndex == 11){
-      
-    }
-    if(this.currentQuestionIndex == 12){
-
+      this.service.sentSurveyData().subscribe(
+        (res: any)=>{
+          if(res.success){
+            this.route.navigate(["/thankyou"])
+          }
+        }
+      )
     }
     // Check if answers are provided for both questions
     if (
