@@ -141,5 +141,18 @@ export class AppConstants {
         }
     ]
 
+    enSurveyQuestions = [
+        {
+          id: 1,
+          title: 'How important is it that I achieve this?',
+          options: [{ id: 1, name: 'Critical' }, { id: 2, name: 'High Priority' }, { id: 3, name: 'Priority' }, { id: 4, name: 'Low Priority' }, { id: 5, name: 'Not a Priority' }],
+        },
+        {
+          id: 2,
+          title: 'How do I rate my performance against this?',
+          options: [{ id: 1, name: 'I am excellent at this' }, { id: 2, name: 'I am good at this' }, { id: 3, name: 'I am average at this' }, { id: 4, name: 'I am poor at this' }, { id: 5, name: 'I am terrible at this' }],
+        },
+      ];
+
 
 }

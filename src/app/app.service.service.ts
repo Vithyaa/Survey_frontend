@@ -10,8 +10,8 @@ export class AppServiceService {
     private http : HttpClient
   ) { }
 
-  sentSurveyData(){
-    return this.http.get("");
+  sentSurveyData(data:any){
+    return this.http.get("", data);
   }
 
 }
