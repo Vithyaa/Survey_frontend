@@ -21,19 +21,125 @@ export class AppConstants {
     ];
 
     engQuestion: any = [
-        { id: 1, topic: "Acceptance", question: "" },
-        { id: 2, topic: "Ambition", question: "" },
-        { id: 3, topic: "Autonomy", question: "" },
-        { id: 4, topic: "Awareness", question: "" },
-        { id: 5, topic: "Discernment", question: "" },
-        { id: 6, topic: "Intention", question: "" },
-        { id: 7, topic: "Passion", question: "" },
-        { id: 8, topic: "Purpose", question: "" },
-        { id: 9, topic: "Refinement", question: "" },
-        { id: 10, topic: "Resilience", question: "" },
-        { id: 11, topic: "Responsibility", question: "" },
+        { id: 1, topic: "Acceptance", question: "I distinguish my capacity to recognise factors beyond my control from my ability to intellectually pinpoint the reasons for such limitations, understanding that true acceptance hinges on cognitive comprehension rather than emotional reactions." },
+        { id: 2, topic: "Ambition", question: "I closely assess my drive to embrace challenges as avenues for growth, my ability to manage my fear of failure, and my consistent commitment to self-care, recognising that true ambition balances aspiration with well-being to fortify self-confidence and mental resilience." },
+        { id: 3, topic: "Autonomy", question: "I have the agency and authority to make and act on my thoughts and decisions, undeterred by competing personal circumstances, external pressures or societal expectations." },
+        { id: 4, topic: "Awareness", question: "I keenly observe my emotional resilience and comfort levels when faced with volatility, uncertainty, complexity, and ambiguity, understanding that true awareness lies in my response to these challenges." },
+        { id: 5, topic: "Discernment", question: "I probe my capacity for introspective thought, my objective open-mindedness, and my diligent nurturing of critical and unbiased thinking, understanding that true discernment is an art of mindful reflection and unbiased evaluation." },
+        { id: 6, topic: "Intention", question: "I meticulously examine my personal purpose for entrepreneurship and its alignment with my business vision, understanding that genuine intention weaves a cohesive thread between personal aspiration and organisational mission." },
+        { id: 7, topic: "Passion", question: "I possess a genuine and deeply-rooted belief in my business idea, an intense enthusiasm for the impact I can create, and an unwavering drive to deliver meaningful solutions to the problems I aim to solve." },
+        { id: 8, topic: "Purpose", question: "My entrepreneurial pursuit goes beyond personal success or profit, but is rooted in a profound sense of purpose that embodies my deeper motivations for 'why' I want to do this." },
+        { id: 9, topic: "Refinement", question: "I scrutinise my dedication to cultivating relationships with those who bolster my aspirations, empathise with my concerns, and guide me to fine-tuning purpose-driven actions, recognising that true refinement emerges from valuable interpersonal connections." },
+        { id: 10, topic: "Resilience", question: "I swiftly adapt and recover from challenges and setbacks, am not discouraged by adversity, and actively use difficulty as a learning opportunity for personal growth and motivation to continue working toward my goals." },
+        { id: 11, topic: "Responsibility", question: "I assess my commitment to owning my reactions to uncontrollable circumstances and my duty to harness my utmost potential as an entrepreneur, recognising that true responsibility is rooted in both accountability and the drive to achieve one's highest purpose." },
         { id: 12, topic: "Mindset Ranking", question: "“In your opinion, please rank the following 11 mindset disciplines (with 1 being the most valuable and 11 being the least valuable) for your own entrepreneurial journey.”" }
-      ];  
+    ];
+
+    surveyQuestions: any = [
+        {
+            "id"
+                :
+                1
+            ,
+            "title"
+                :
+                "これを達成することはどれくらい重要ですか？"
+            ,
+            "options"
+                : [{
+                    "id"
+                        :
+                        1
+                    ,
+                    "name"
+                        :
+                        "クリティカル"
+                }, {
+                    "id"
+                        :
+                        2
+                    ,
+                    "name"
+                        :
+                        "高い優先度"
+                }, {
+                    "id"
+                        :
+                        3
+                    ,
+                    "name"
+                        :
+                        "優先度"
+                }, {
+                    "id"
+                        :
+                        4
+                    ,
+                    "name"
+                        :
+                        "低い優先度"
+                }, {
+                    "id"
+                        :
+                        5
+                    ,
+                    "name"
+                        :
+                        "優先度ではない"
+                }]
+        }, {
+            "id"
+                :
+                2
+            ,
+            "title"
+                :
+                "これに対する自分のパフォーマンスをどのように評価しますか？"
+            ,
+            "options"
+                : [{
+                    "id"
+                        :
+                        1
+                    ,
+                    "name"
+                        :
+                        "私はこれが優れている"
+                }, {
+                    "id"
+                        :
+                        2
+                    ,
+                    "name"
+                        :
+                        "私はこれが得意だ"
+                }, {
+                    "id"
+                        :
+                        3
+                    ,
+                    "name"
+                        :
+                        "私はこれが平均だ"
+                }, {
+                    "id"
+                        :
+                        4
+                    ,
+                    "name"
+                        :
+                        "私はこれが不得意だ"
+                }, {
+                    "id"
+                        :
+                        5
+                    ,
+                    "name"
+                        :
+                        "私はこれがひどい"
+                }]
+        }
+    ]
 
 
 }
