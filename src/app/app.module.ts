@@ -7,6 +7,8 @@ import { WelcomePageComponent } from './pages/welcome-page/welcome-page.componen
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { SurveyPageComponent } from './pages/survey-page/survey-page.component';
 import { ThankPageComponent } from './pages/thank-page/thank-page.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { SurveyQuestionComponent } from './pages/survey-question/survey-question.component';
 
 @NgModule({
   declarations: [
@@ -14,11 +16,13 @@ import { ThankPageComponent } from './pages/thank-page/thank-page.component';
     WelcomePageComponent,
     LoginPageComponent,
     SurveyPageComponent,
-    ThankPageComponent
+    ThankPageComponent,
+    SurveyQuestionComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
