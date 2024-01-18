@@ -68,6 +68,7 @@ export class SurveyPageComponent implements OnInit {
           }
         }
       )
+      this.route.navigate(["/thankyou"])
     }
     // Check if answers are provided for both questions
     if (
